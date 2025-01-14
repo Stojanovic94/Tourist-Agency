@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turistička Agencija "Putnik"</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/Putnik Logo.png" alt="Logo Putnik">
+        </div>
+    </header>
+
+    <section class="slideshow">
+        <div class="slides">
+            <img src="img/Paris.jpg" alt="Paris">
+            <img src="img/London.jfif" alt="London">
+            <img src="img/Rim.jpg" alt="Rim">
+            <img src="img/Beč.jpg" alt="Beč">
+            <img src="img/Minhen.jfif" alt="Minhen">
+        </div>
+    </section>
+
+    <nav>
+        <ul>
+            <li><a href="#">Početna</a></li>
+            <li><a href="#">O Nama</a></li>
+            <li><a href="#">Naš Tim</a></li>
+            <li><a href="#">Destinacije</a></li>
+            <li><a href="#">Nova Godina</a></li>
+            <li><a href="#">Utisci Putnika</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section class="reservation-form">
+        <h2>Forma za rezervaciju putovanja</h2>
+        <form id="reservationForm">
+            <label for="destination">Destinacija:</label>
+            <select id="destination" name="destination">
+                <option>Pariz</option>
+                <option>London</option>
+                <option>Minhen</option>
+                <option>Beč</option>
+            </select>
+
+            <label for="fullName">Ime i Prezime:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email putnika:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="emailError">- Unesite validnu email adresu.</span>
+
+            <label for="phone">Kontakt telefon:</label>
+            <input type="tel" id="phone" name="phone" pattern="\d*" required>
+
+            <label for="departureDate">Datum Polaska:</label>
+            <input type="date" id="departureDate" name="departureDate" required>
+
+            <label for="nights">Broj noćenja:</label>
+            <input type="number" id="nights" name="nights" required>
+
+            <label for="passengers">Broj putnika:</label>
+            <input type="number" id="passengers" name="passengers" required>
+
+            <fieldset>
+                <legend>Dodatne opcije:</legend>
+                <label><input type="checkbox" name="options" value="airportTransport"> Prevoz sa aerodroma</label>
+                <label><input type="checkbox" name="options" value="guide"> Vodič</label>
+                <label><input type="checkbox" name="options" value="insurance"> Putno osiguranje</label>
+                <label><input type="checkbox" name="options" value="childDiscount"> Doplata za decu < 12 godina</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tip Smeštaja:</legend>
+                <label><input type="radio" name="accommodation" value="allInclusive" required> All Inclusive</label>
+                <label><input type="radio" name="accommodation" value="bb"> Noćenje i Doručak</label>
+                <label><input type="radio" name="accommodation" value="private"> Privatan Smeštaj</label>
+            </fieldset>
+
+            <button type="submit">Ok</button>
+            <button type="reset">Reset</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; Turistička Agencija "Putnik".</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

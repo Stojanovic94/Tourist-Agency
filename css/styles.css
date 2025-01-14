@@ -1,0 +1,145 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f2f2; /* Usklađena boja pozadine */
+}
+
+/* Header */
+header {
+    background-color: #800000; /* Bordo boja */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+/* Slideshow */
+.slideshow {
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    animation: slide 20s infinite;
+}
+
+.slides img {
+    width: 20%;
+    height: auto;
+    display: block;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-20%); }
+    45% { transform: translateX(-20%); }
+    50% { transform: translateX(-40%); }
+    70% { transform: translateX(-40%); }
+    75% { transform: translateX(-60%); }
+    95% { transform: translateX(-60%); }
+    100% { transform: translateX(0); }
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #800000; /* Bordo boja */
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Form */
+.reservation-form {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+.reservation-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reservation-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.reservation-form input, 
+.reservation-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+fieldset {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #800000; /* Bordo boja za dugmiće */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button[type="reset"] {
+    background-color: #cc0000; /* Tamnija bordo boja za reset */
+}
+
+button:hover {
+    background-color: #660000;
+}
+
+/* Fix for footer positioning */
+.reservation-form {
+    margin-bottom: 100px;
+}
+
+.error-message {
+    color: red;
+    display: none;
+    font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+    background-color: #800000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
